@@ -10,6 +10,7 @@ const config = require("./config/key");
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //application/json 을 분석해서 가져옴
+// test
 app.use(bodyParser.json());
 
 const mongoose = require("mongoose");
