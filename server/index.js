@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
   res.send("Hello World! 오늘은?? 입니다. ~");
 });
 
-app.post("/api/register", (req, res) => {
+app.post("/api/users/register", (req, res) => {
   //회원 가입 시 필요한 정보 client 에서 가져오면 그걸 DB에 넣어준다.
 
   const user = new User(req.body);
@@ -40,7 +40,7 @@ app.post("/api/register", (req, res) => {
   });
 });
 
-app.post("/api/login", (req, res) => {
+app.post("/api/users/login", (req, res) => {
   //요청된 이메일을 DB에서 있는지 찾음.
   User.findOne({ email: req.body.email }, (err, user) => {
     if (!user) {
@@ -94,6 +94,7 @@ app.get("/api/users/logout", auth, (req, res) => {
 
 app.get("/api/hello", (req, res) => {
   res.send("성공");
+  console.log(res);
 });
 
 app.listen(port, () => {

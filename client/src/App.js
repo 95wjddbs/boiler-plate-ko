@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./components/view/LandingPage/LandingPage";
 import LoginPage from "./components/view/LoginPage/LoginPage";
 import RegisterPage from "./components/view/RegisterPage/RegisterPage";
+import auth from "./hoc/auth";
 
 function App() {
   return (
